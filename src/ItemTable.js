@@ -9,6 +9,7 @@ export default function ItemTable(props) {
             <th>Name</th>
             <th>Gender</th>
             <th>Age</th>
+            <th>Cancel</th>
           </tr>
           <tr>
             <td>{props.name}</td>
