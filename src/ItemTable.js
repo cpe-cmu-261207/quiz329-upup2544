@@ -14,6 +14,9 @@ export default function ItemTable(props) {
             <td>{props.name}</td>
             <td>{props.gender}</td>
             <td>{props.age}</td>
+            <td>
+              <button onClick={() => props.del(props.name)}> x </button>
+            </td>
           </tr>
         </tbody>
       </table>

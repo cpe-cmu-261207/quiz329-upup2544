@@ -23,6 +23,15 @@ function App() {
     const per = [...persons, inputData];
     setPerson(per);
   }
+
+  function onDeleteCourse(id) {
+    // TODO
+    const person = persons.filter((item) => {
+      return item.name !== id;
+    });
+    setPerson(person);
+  }
+
   return (
     <div className="card" style={{ width: 400 }}>
       <div className="card-content">
@@ -82,7 +91,12 @@ function App() {
         {/* sample table */}
         {persons.map((item) => {
           return (
-            <ItemTable name={item.name} gender={item.gender} age={item.age} />
+            <ItemTable
+              name={item.name}
+              gender={item.gender}
+              age={item.age}
+              del={onDeleteCourse}
+            />
           );
         })}
         <p>Thanachok Wirotsasithon 620610791</p>
